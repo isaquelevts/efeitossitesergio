@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>06 · Card com brilho subindo da base</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap">
+  <link rel="stylesheet" href="../../shared/tokens.css">
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="effect.css">
+</head>
+<body>
+
+  <main>
+    <section class="sec"><div class="container">
+      <div class="glow-card" data-card>
+        <div class="card-fx" aria-hidden="true">
+          <div class="card-fx__sweep"></div>
+          <div class="card-fx__glow"></div>
+          <div class="card-fx__sides"></div>
+        </div>
+        <p class="glow-card__q" data-reveal="block">Quem nunca se perguntou de onde viemos ou para onde vamos?</p>
+        <p class="glow-card__a" data-reveal="words"><span class="grad">A resposta está na astronomia.</span></p>
+      </div>
+    </div></section>
+  </main>
+
+  <div class="demo-tag"><a href="../../index.html">← todos os efeitos</a><span>06 · Card com brilho subindo da base</span><button id="replay" type="button">↻ repetir</button></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="../../shared/fx-core.js"></script>
+  <script src="effect.js"></script>
+</body>
+</html>

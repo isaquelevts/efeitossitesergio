@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11 · Carrossel infinito de vídeos do YouTube</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap">
+  <link rel="stylesheet" href="../../shared/tokens.css">
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="effect.css">
+</head>
+<body>
+
+  <main>
+    <section class="voices">
+      <header class="voices__head container">
+        <h2 class="voices__title title" data-reveal="words">Depoimentos de quem <span class="grad">já fez</span></h2>
+        <p class="voices__lede lede" data-reveal="block">Passe o mouse para pausar. Clique para assistir.</p>
+      </header>
+      <!-- troque data-yt="" pelo ID do vídeo do YouTube (ex.: data-yt="dQw4w9WgXcQ"): a capa vem do YouTube e o vídeo só carrega no clique -->
+      <div class="voices__rail" data-voices>
+        <ul class="voices__track">
+        <li><button class="voice" type="button" data-yt="" style="--poster:url(../../assets/space-1.webp)" aria-label="Vídeo 1">
+          <span class="voice__poster" aria-hidden="true"></span>
+          <span class="voice__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="voice__meta"><b>Aluno</b><i>Depoimento 01</i></span>
+        </button></li>
+        <li><button class="voice" type="button" data-yt="" style="--poster:url(../../assets/space-2.webp)" aria-label="Vídeo 2">
+          <span class="voice__poster" aria-hidden="true"></span>
+          <span class="voice__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="voice__meta"><b>Aluno</b><i>Depoimento 02</i></span>
+        </button></li>
+        <li><button class="voice" type="button" data-yt="" style="--poster:url(../../assets/space-3.webp)" aria-label="Vídeo 3">
+          <span class="voice__poster" aria-hidden="true"></span>
+          <span class="voice__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="voice__meta"><b>Aluno</b><i>Depoimento 03</i></span>
+        </button></li>
+        <li><button class="voice" type="button" data-yt="" style="--poster:url(../../assets/space-4.webp)" aria-label="Vídeo 4">
+          <span class="voice__poster" aria-hidden="true"></span>
+          <span class="voice__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="voice__meta"><b>Aluno</b><i>Depoimento 04</i></span>
+        </button></li>
+        <li><button class="voice" type="button" data-yt="" style="--poster:url(../../assets/space-5.webp)" aria-label="Vídeo 5">
+          <span class="voice__poster" aria-hidden="true"></span>
+          <span class="voice__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="voice__meta"><b>Aluno</b><i>Depoimento 05</i></span>
+        </button></li>
+        <li><button class="voice" type="button" data-yt="" style="--poster:url(../../assets/space-6.webp)" aria-label="Vídeo 6">
+          <span class="voice__poster" aria-hidden="true"></span>
+          <span class="voice__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="voice__meta"><b>Aluno</b><i>Depoimento 06</i></span>
+        </button></li>
+        <li><button class="voice" type="button" data-yt="" style="--poster:url(../../assets/space-7.webp)" aria-label="Vídeo 7">
+          <span class="voice__poster" aria-hidden="true"></span>
+          <span class="voice__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="voice__meta"><b>Aluno</b><i>Depoimento 07</i></span>
+        </button></li>
+        <li><button class="voice" type="button" data-yt="" style="--poster:url(../../assets/space-8.webp)" aria-label="Vídeo 8">
+          <span class="voice__poster" aria-hidden="true"></span>
+          <span class="voice__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="voice__meta"><b>Aluno</b><i>Depoimento 08</i></span>
+        </button></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div class="demo-tag"><a href="../../index.html">← todos os efeitos</a><span>11 · Carrossel infinito de vídeos do YouTube</span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="../../shared/fx-core.js"></script>
+  <script src="effect.js"></script>
+</body>
+</html>

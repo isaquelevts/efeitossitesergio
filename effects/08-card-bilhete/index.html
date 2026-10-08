@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>08 · Card em formato de bilhete</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap">
+  <link rel="stylesheet" href="../../shared/tokens.css">
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="effect.css">
+</head>
+<body>
+
+  <main>
+    <section class="ticket"><div class="container">
+      <article class="ticket__card" data-ticket>
+        <div class="ticket__main">
+          <p class="ticket__kicker" data-t>Vamos juntos!</p>
+          <h2 class="ticket__title" data-t>Curso <span class="grad">COMPLETO</span> + Comunidade + Lives</h2>
+          <ul class="ticket__list">
+            <li data-t><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>40 horas-aula</span></li>
+            <li data-t><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Grupo de alunos</span></li>
+            <li data-t><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Lives exclusivas</span></li>
+            <li data-t><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Certificado de conclusão</span></li>
+          </ul>
+        </div>
+        <div class="ticket__ticket">
+          <p class="ticket__by" data-t>Por apenas</p>
+          <p class="ticket__price" data-t><span>12x de</span><b>R$ <em data-count="49">49</em></b></p>
+          <p class="ticket__cash" data-t>ou <b>R$ 490</b> à vista</p>
+          <p class="ticket__note" data-t>Parcelamento somente no cartão.</p>
+        </div>
+      </article>
+    </div></section>
+  </main>
+
+  <div class="demo-tag"><a href="../../index.html">← todos os efeitos</a><span>08 · Card em formato de bilhete</span><button id="replay" type="button">↻ repetir</button></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="../../shared/fx-core.js"></script>
+  <script src="effect.js"></script>
+</body>
+</html>

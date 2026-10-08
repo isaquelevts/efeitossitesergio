@@ -1,0 +1,3 @@
+.center { text-align: center; display: grid; gap: 2rem; justify-items: center; }
+.sec.light { background: var(--color-paper-light); color: var(--color-ink-dark); }
+.title.dark { color: var(--color-ink-dark); }

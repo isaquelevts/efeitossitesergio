@@ -1,0 +1,2 @@
+.narrow { max-width: 46rem; display: grid; gap: 1.4rem; text-align: center; justify-items: center; }
+.sec:nth-child(2) { background: radial-gradient(40rem 20rem at 50% 50%, rgba(24,86,255,.16), transparent 70%); }

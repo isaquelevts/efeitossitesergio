@@ -1,0 +1,81 @@
+/* Carrossel infinito em CSS puro: a lista é duplicada e a trilha anda -50% (o laço fecha sem emenda).
+ * Pausa no hover e enquanto um vídeo toca. As bordas dissolvem com mask. */
+.voices__lede { margin-top: 1.4rem; }
+/* ---------- depoimentos: carrossel infinito ---------- */
+.voices { padding: 8rem 0 9rem; position: relative; overflow: clip; }
+.voices__glow { position: absolute; inset: 0; background: radial-gradient(60rem 20rem at 50% 56%, rgba(24, 86, 255, 0.14), transparent 70%); }
+.voices__head { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 52rem; }
+.voices__title { max-width: 34rem; }
+.voices__rail {
+  margin-top: 4.5rem;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  mask: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+}
+.voices__track {
+  display: flex;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: voices-run 70s linear infinite;
+  will-change: transform;
+}
+.voices__rail:hover .voices__track, .voices__rail.is-playing .voices__track { animation-play-state: paused; }
+@keyframes voices-run { to { transform: translateX(-50%); } }
+.voices__track li { margin-right: 1.25rem; }
+.voice {
+  position: relative;
+  display: block;
+  width: clamp(17rem, 27vw, 24rem);
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border-radius: 1.1rem;
+  border: 1px solid var(--color-line-dark);
+  background: var(--color-card);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  transition: border-color 0.4s var(--ease-out), transform 0.5s var(--ease-out);
+}
+.voice:hover { border-color: rgba(137, 189, 241, 0.45); transform: translateY(-4px); }
+.voice__poster {
+  position: absolute;
+  inset: 0;
+  background: var(--poster) center / cover;
+  filter: saturate(0.9);
+  transition: transform 0.9s var(--ease-out);
+}
+.voice:hover .voice__poster { transform: scale(1.06); }
+.voice::after {                                 /* leitura do texto sobre a capa */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(2, 11, 20, 0.85), rgba(2, 11, 20, 0) 55%);
+}
+.voice__play {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 46%;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: rgba(24, 86, 255, 0.5);
+  border: 1px solid rgba(215, 233, 255, 0.5);
+  backdrop-filter: blur(6px);
+  transition: transform 0.45s var(--ease-out), background 0.3s var(--ease-out);
+}
+.voice__play svg { width: 1.25rem; height: 1.25rem; fill: #fff; margin-left: 0.12rem; }
+.voice:hover .voice__play { transform: scale(1.12); background: rgba(24, 86, 255, 0.85); }
+.voice__meta { position: absolute; z-index: 2; left: 1.1rem; right: 1.1rem; bottom: 0.95rem; display: grid; gap: 0.1rem; }
+.voice__meta b { font-family: var(--font-display); font-weight: 600; font-size: 1.0625rem; color: #fff; }
+.voice__meta i { font-style: normal; font-size: 0.8125rem; letter-spacing: 0.04em; color: var(--color-muted-dark); }
+.voice iframe { position: absolute; inset: 0; z-index: 5; width: 100%; height: 100%; border: 0; }
+

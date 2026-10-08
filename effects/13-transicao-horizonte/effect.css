@@ -1,0 +1,34 @@
+/* A seção clara fica fixada no fim; um overlay com radial-gradient é o horizonte de um planeta que sobe.
+ * A cor do overlay é a MESMA da seção seguinte (--color-night): o scroll sai do claro para o escuro sem emenda. */
+.light { position: relative; min-height: 130svh; display: grid; align-items: center; background: var(--color-paper-light); color: var(--color-ink-dark); }
+.light__inner { display: grid; gap: 1.2rem; max-width: 46rem; }
+.title.dark, .lede.dark { color: var(--color-ink-dark); }
+.lede.dark { color: var(--color-text-dark); }
+.light .grad { --color-grad-a: #4f8dff; --color-grad-b: #1243e0; }          /* degradê escurecido: o claro some no branco */
+.dark { background: var(--color-night); }
+.center { text-align: center; }
+
+.light__eclipse { display: none; }
+.light.has-eclipse { will-change: transform; }   /* já é camada própria antes de fixar: sem engasgo no instante em que o pin começa */
+.light.has-eclipse .light__eclipse {
+  --r: 0px;                                    /* raio do horizonte — animado pelo GSAP */
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  height: 100svh;                              /* cobre exatamente o que se vê enquanto a seção está fixada */
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(circle at 50% 100%,
+    var(--color-night) 0,
+    var(--color-night) max(calc(var(--r) - 2px), 0px),
+    #7fb4ff calc(var(--r) - 1px),
+    var(--color-eclipse-rim) calc(var(--r) + 0.5px),
+    rgba(40, 110, 255, 0.5) calc(var(--r) + 3px),
+    rgba(24, 86, 255, 0.26) calc(var(--r) + 28px),
+    transparent calc(var(--r) + 110px));
+}
+

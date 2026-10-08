@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>04 · Entrada do texto da hero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap">
+  <link rel="stylesheet" href="../../shared/tokens.css">
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="../05-botao-brilho/effect.css">
+  <link rel="stylesheet" href="effect.css">
+</head>
+<body>
+
+  <main>
+    <header class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">Vamos juntos aprender <span class="hero__title-accent">Astronomia?</span></h1>
+          <p class="hero__quote">“Salve Salve amigos da Astronomia em todo Mundo! Meu nome é Fulano, criador do canal, e vamos juntos compreender o Universo neste curso!”</p>
+          <div class="hero__cta">
+            <a class="btn" href="#">
+          <span class="btn__inner">
+            <span class="btn__ring" aria-hidden="true"></span>
+            <span class="btn__shine" aria-hidden="true"></span>
+            <span class="btn__fill" aria-hidden="true"></span>
+            <span class="btn__label">Quero ser aluno</span>
+            <span class="btn__chip" aria-hidden="true">
+              <span class="btn__arrow btn__arrow--now"><img src="../../assets/icon-arrow.svg" width="14.4966" height="14.4966" alt=""></span>
+              <span class="btn__arrow btn__arrow--next"><img src="../../assets/icon-arrow.svg" width="14.4966" height="14.4966" alt=""></span>
+            </span>
+          </span>
+        </a>
+            <p class="hero__price"><b>R$ 49/mês</b><span>no plano anual</span></p>
+          </div>
+        </div>
+      </div>
+    </header>
+  </main>
+
+  <div class="demo-tag"><a href="../../index.html">← todos os efeitos</a><span>04 · Entrada do texto da hero</span><button id="replay" type="button">↻ repetir</button></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="../../shared/fx-core.js"></script>
+  <script src="effect.js"></script>
+</body>
+</html>

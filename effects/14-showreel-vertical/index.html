@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>14 · Showreel vertical: a imagem cresce, o texto sobe, rolagem que "encaixa"</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap">
+  <link rel="stylesheet" href="../../shared/tokens.css">
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="effect.css">
+</head>
+<body>
+
+  <main>
+    <section class="sec"><div class="container center"><h1 class="title">Role para <span class="grad">explorar</span></h1><p class="lede">Cada gesto da roda leva ao próximo tópico.</p></div></section>
+    <section class="prog" id="conteudo" aria-labelledby="prog-title">
+      <div class="prog__pin">
+        <div class="prog__bgs" aria-hidden="true">
+          <img class="prog__bg" data-bg src="../../assets/space-1-bg.webp" alt="" decoding="async">
+          <img class="prog__bg" data-bg src="../../assets/space-2-bg.webp" alt="" decoding="async">
+          <img class="prog__bg" data-bg src="../../assets/space-3-bg.webp" alt="" decoding="async">
+          <img class="prog__bg" data-bg src="../../assets/space-4-bg.webp" alt="" decoding="async">
+          <img class="prog__bg" data-bg src="../../assets/space-5-bg.webp" alt="" decoding="async">
+        </div>
+        <header class="prog__head container">
+          <h2 class="prog__title" id="prog-title" data-reveal="words">Conteúdo <span class="grad">programático</span></h2>
+          <p class="prog__lede" data-reveal="block">Veja o que você vai aprender.</p>
+        </header>
+        <div class="prog__stage container">
+          <div class="prog__frame" aria-hidden="true">
+            <figure class="pf" data-pf><div class="pf__crop"><img src="../../assets/space-1.webp" width="1000" height="1000" alt="" loading="lazy"></div></figure>
+            <figure class="pf" data-pf><div class="pf__crop"><img src="../../assets/space-2.webp" width="1000" height="1000" alt="" loading="lazy"></div></figure>
+            <figure class="pf" data-pf><div class="pf__crop"><img src="../../assets/space-3.webp" width="1000" height="1000" alt="" loading="lazy"></div></figure>
+            <figure class="pf" data-pf><div class="pf__crop"><img src="../../assets/space-4.webp" width="1000" height="1000" alt="" loading="lazy"></div></figure>
+            <figure class="pf" data-pf><div class="pf__crop"><img src="../../assets/space-5.webp" width="1000" height="1000" alt="" loading="lazy"></div></figure>
+          </div>
+          <div class="prog__texts">
+            <div class="prog__track">
+            <article class="pt" data-pt>
+              <p class="pt__count"><b>01</b> / 05</p>
+              <h3 class="pt__title">História da Astronomia</h3>
+              <ul class="pt__list"><li>Astronomia Pré-histórica</li><li>Astronomia Antiga</li><li>Astronomia Clássica</li><li>Astronomia Moderna</li></ul>
+            </article>
+            <article class="pt" data-pt>
+              <p class="pt__count"><b>02</b> / 05</p>
+              <h3 class="pt__title">Conhecendo o Céu</h3>
+              <ul class="pt__list"><li>As Constelações</li><li>A Esfera Celeste</li><li>O Movimento do Sol e da Lua</li><li>Estações do Ano</li></ul>
+            </article>
+            <article class="pt" data-pt>
+              <p class="pt__count"><b>03</b> / 05</p>
+              <h3 class="pt__title">Óptica e Luz</h3>
+              <ul class="pt__list"><li>O espectro eletromagnético</li><li>Telescópios refratores</li><li>Telescópios refletores</li></ul>
+            </article>
+            <article class="pt" data-pt>
+              <p class="pt__count"><b>04</b> / 05</p>
+              <h3 class="pt__title">O Sistema Solar</h3>
+              <ul class="pt__list"><li>A formação do Sistema Solar</li><li>Os planetas internos</li><li>O cinturão de asteroides</li><li>Os planetas externos</li></ul>
+            </article>
+            <article class="pt" data-pt>
+              <p class="pt__count"><b>05</b> / 05</p>
+              <h3 class="pt__title">As Estrelas</h3>
+              <ul class="pt__list"><li>Medindo as estrelas</li><li>Evolução estelar</li><li>Estrelas de nêutrons e buracos negros</li></ul>
+            </article>
+            </div>
+          </div>
+        </div>
+        <div class="prog__foot container" aria-hidden="true">
+          <div class="prog__bar"><span></span></div>
+          <span class="prog__hint">Role para explorar</span>
+        </div>
+      </div>
+    </section>
+    <section class="sec"><div class="container center"><p class="lede">Fim do showreel — a rolagem sai normalmente pelas pontas.</p></div></section>
+  </main>
+
+  <div class="demo-tag"><a href="../../index.html">← todos os efeitos</a><span>14 · Showreel vertical: a imagem cresce, o texto sobe, rolagem que "encaixa"</span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="../../shared/fx-core.js"></script>
+  <script src="effect.js"></script>
+</body>
+</html>

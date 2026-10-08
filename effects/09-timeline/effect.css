@@ -1,0 +1,120 @@
+/* Título que acompanha a rolagem (position: sticky) + uma timeline vertical ligando os números.
+ * IMPORTANTE: o sticky só funciona se nenhum ancestral tiver overflow: hidden (use overflow: clip) e o título
+ * e a lista estiverem num wrapper próprio — o sticky para onde o PAI acaba. */
+.pad { display: block; padding: 9rem 0 11rem; }
+.tl__cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: clamp(3rem, 7vw, 7.5rem); align-items: start; }
+.tl__head { position: sticky; top: calc(50svh - 6rem); }
+.tl__head .title { max-width: 26rem; }
+.tl__head .lede { margin-top: 1.4rem; }
+
+/* timeline: um fio vertical liga os nós numerados; ele se enche de luz conforme você rola */
+.tl__list { --node: 2.75rem; position: relative; margin: 0; padding: 0; list-style: none; }
+.tl__rail {
+  --p: 0;
+  position: absolute;
+  left: calc(var(--node) / 2);
+  top: var(--rail-top, 0);
+  bottom: var(--rail-bot, 0);
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 2px;
+  background: rgba(137, 189, 241, 0.13);
+  pointer-events: none;
+}
+.tl__rail i {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, var(--color-glow-sky), var(--color-glow-blue));
+  box-shadow: 0 0 12px rgba(95, 180, 254, 0.55);
+  transform-origin: 50% 0;
+  transform: scaleY(var(--p));
+}
+.tl__rail b {                                  /* a ponta do fio: um cometinha que desce na frente da luz */
+  position: absolute;
+  left: 50%;
+  top: calc(var(--p) * 100%);
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: -0.3125rem 0 0 -0.3125rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(95, 180, 254, 0.22), 0 0 22px 6px rgba(95, 180, 254, 0.75);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-out);
+}
+.tl__rail.is-live b { opacity: 1; }
+
+.tl__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--node) minmax(0, 0.95fr) minmax(0, 1fr);
+  column-gap: 1.75rem;
+  align-items: center;
+  padding: 1.55rem 0;
+}
+.tl__n {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--node);
+  height: var(--node);
+  border-radius: 50%;
+  background: var(--color-night);
+  border: 1px solid rgba(137, 189, 241, 0.2);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: rgba(157, 180, 211, 0.7);
+  transition: color 0.5s var(--ease-out), border-color 0.5s var(--ease-out), background 0.5s var(--ease-out), box-shadow 0.6s var(--ease-out);
+}
+.tl__n::after {                                /* anel que se abre uma vez quando o fio chega no nó */
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 1px solid var(--color-glow-sky);
+  opacity: 0;
+}
+.tl__row.is-on .tl__n {
+  color: #fff;
+  border-color: var(--color-glow-sky);
+  background: radial-gradient(circle, rgba(47, 107, 255, 0.6), rgba(24, 86, 255, 0.18) 75%), var(--color-night);
+  box-shadow: 0 0 0 5px rgba(24, 86, 255, 0.12), 0 0 28px rgba(47, 107, 255, 0.6);
+}
+.tl__row.is-on .tl__n::after { animation: tl-ping 1.1s var(--ease-out) 1; }
+@keyframes tl-ping { from { transform: scale(1); opacity: 0.8; } to { transform: scale(2.3); opacity: 0; } }
+
+.tl__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 0.9vw + 1.1rem, 1.875rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: rgba(241, 241, 248, 0.4);
+  transition: color 0.6s var(--ease-out), transform 0.5s var(--ease-out);
+}
+.tl__desc {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 350;
+  line-height: 1.45;
+  color: rgba(157, 180, 211, 0.45);
+  transition: color 0.6s var(--ease-out);
+}
+.tl__row.is-on .tl__name { color: var(--color-ink); }
+.tl__row.is-on .tl__desc { color: var(--color-muted-dark); }
+@media (hover: hover) and (pointer: fine) {
+  .tl__row:hover .tl__name { transform: translateX(0.5rem); color: #fff; }
+}
+
+
+@media (max-width: 899px) {
+  .tl__cols { grid-template-columns: 1fr; }
+  .tl__head { position: static; margin-bottom: 3rem; }
+  .tl__row { grid-template-columns: var(--node) minmax(0, 1fr); row-gap: .3rem; padding: 1.2rem 0; align-items: start; }
+  .tl__n { grid-row: span 2; }
+  .tl__desc { grid-column: 2; }
+}

@@ -1,0 +1,50 @@
+/* tokens.css — cores, tipos e curvas. Troque aqui para trocar a identidade de todos os efeitos.
+ * Fonte: Geist (Google Fonts, livre). No projeto original usei uma fonte licenciada; aqui fica a Geist. */
+:root {
+  /* azul-noite */
+  --color-night:       #020b14;
+  --color-card:        #031321;
+  --color-card-deep:   #030a16;
+  --color-ink:         #f1f1f8;
+  --color-text:        #bcbccb;
+  --color-muted-dark:  #9db4d3;
+  --color-line-dark:   rgba(137, 189, 241, 0.15);
+
+  /* azuis */
+  --color-blue:        #1856ff;
+  --color-deep:        #1c51ff;
+  --color-sky:         #5fb4fe;
+  --color-glow-white:  #eaf4ff;
+  --color-glow-sky:    #8ec8ff;
+  --color-glow-blue:   #2f6bff;
+  --color-eclipse-rim: #d7e9ff;
+  --color-grad-a:      #89bdf1;
+  --color-grad-b:      #1856ff;
+  --color-chip:        #00102b;
+
+  /* fundo claro (transição claro → escuro) */
+  --color-paper-light: #f6f9ff;
+  --color-ink-dark:    #06122c;
+  --color-text-dark:   #3d4b69;
+
+  /* botão com brilho */
+  --color-btn-a:       #0e96fe;
+  --color-btn-b:       #0055ff;
+  --color-btn-halo-a:  rgba(0, 85, 255, 0.5);
+  --color-btn-halo-b:  rgba(82, 139, 255, 0.5);
+  --color-btn-glow:    rgba(0, 85, 255, 0.4);
+  --color-btn-ring:    rgba(255, 255, 255, 0.19);
+
+  /* tipo */
+  --font-display: "Geist", system-ui, sans-serif;
+  --font-body:    "Geist", system-ui, sans-serif;
+  --text-btn:     0.9627rem;
+
+  /* espaço */
+  --space-2: 0.453rem;
+  --space-3: 0.9626rem;
+  --space-4: 1.359rem;
+  --space-5: 1.812rem;
+  --radius-pill: 999px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}

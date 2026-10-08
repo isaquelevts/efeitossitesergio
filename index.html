@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Efeitos GSAP · galeria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap">
+  <link rel="stylesheet" href="shared/tokens.css">
+  <link rel="stylesheet" href="shared/base.css">
+  <style>
+    body { background: radial-gradient(50rem 24rem at 80% 0, rgba(24,86,255,.2), transparent 70%), var(--color-night); }
+    .wrap { max-width: 76rem; margin: 0 auto; padding: 5rem 1.5rem 6rem; }
+    h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem); line-height: 1; letter-spacing: -.04em; }
+    .sub { max-width: 38rem; margin-top: 1.2rem; color: var(--color-muted-dark); font-size: 1.1875rem; }
+    .grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr)); gap: 1rem; }
+    .item { position: relative; display: grid; align-content: start; gap: .55rem; padding: 1.5rem; min-height: 13rem; border-radius: 1.25rem; border: 1px solid var(--color-line-dark);
+      background: linear-gradient(180deg, rgba(137,189,241,.075), rgba(137,189,241,.015) 60%), var(--color-card); transition: transform .45s var(--ease-out), border-color .3s var(--ease-out); }
+    .item:hover { transform: translateY(-5px); border-color: rgba(137,189,241,.4); }
+    .item__n { font-size: .8125rem; letter-spacing: .08em; color: rgba(157,180,211,.6); font-variant-numeric: tabular-nums; }
+    .item__cat { position: absolute; top: 1.4rem; right: 1.5rem; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--color-glow-sky); }
+    .item h2 { margin-top: 1.4rem; font-family: var(--font-display); font-weight: 600; font-size: 1.375rem; line-height: 1.15; letter-spacing: -.025em; }
+    .item p { color: var(--color-muted-dark); font-size: .96rem; line-height: 1.5; }
+    .foot { margin-top: 4rem; font-size: .875rem; color: rgba(157,180,211,.7); }
+    .foot a { color: var(--color-glow-sky); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Efeitos <span class="grad">GSAP</span></h1>
+    <p class="sub">Todos os efeitos de texto, card, transição e rolagem da landing page — cada um em uma pasta própria, com demo, código comentado e um README curto.</p>
+    <div class="grid">
+      <a class="item" href="effects/01-rolagem-suave/index.html">
+        <span class="item__n">01</span>
+        <span class="item__cat">Scroll</span>
+        <h2>Rolagem suave</h2>
+        <p>Lenis + ScrollTrigger com lerp 0.09 — sem o "tranco" do primeiro movimento.</p>
+      </a>
+      <a class="item" href="effects/02-text-reveal/index.html">
+        <span class="item__n">02</span>
+        <span class="item__cat">Texto</span>
+        <h2>Text reveal (Helios)</h2>
+        <p>Palavra por palavra ou em bloco, saindo de um blur. Reverte ao voltar.</p>
+      </a>
+      <a class="item" href="effects/03-text-scrub/index.html">
+        <span class="item__n">03</span>
+        <span class="item__cat">Texto</span>
+        <h2>Texto que acende com a rolagem</h2>
+        <p>Cada palavra acende na ordem de leitura, amarrada ao scroll (scrub).</p>
+      </a>
+      <a class="item" href="effects/04-entrada-hero/index.html">
+        <span class="item__n">04</span>
+        <span class="item__cat">Texto</span>
+        <h2>Entrada do texto da hero</h2>
+        <p>Título com blur forte, citação linha por linha, botão com "pop".</p>
+      </a>
+      <a class="item" href="effects/05-botao-brilho/index.html">
+        <span class="item__n">05</span>
+        <span class="item__cat">Botão</span>
+        <h2>Botão com brilho girando</h2>
+        <p>CSS puro: fio de luz girando na borda, halo azul, seta que troca no hover.</p>
+      </a>
+      <a class="item" href="effects/06-card-brilho/index.html">
+        <span class="item__n">06</span>
+        <span class="item__cat">Card</span>
+        <h2>Card com brilho subindo da base</h2>
+        <p>Estilo Reflect em azul: brilho em U, faixa de luz na borda e texto por cima.</p>
+      </a>
+      <a class="item" href="effects/07-cards-cascata/index.html">
+        <span class="item__n">07</span>
+        <span class="item__cat">Card</span>
+        <h2>Cards em cascata + holofote</h2>
+        <p>Cards saindo do blur em sequência e uma luz que segue o mouse.</p>
+      </a>
+      <a class="item" href="effects/08-card-bilhete/index.html">
+        <span class="item__n">08</span>
+        <span class="item__cat">Card</span>
+        <h2>Card em formato de bilhete</h2>
+        <p>Borda com fio de luz girando (@property), picotes e preço que conta.</p>
+      </a>
+      <a class="item" href="effects/09-timeline/index.html">
+        <span class="item__n">09</span>
+        <span class="item__cat">Lista</span>
+        <h2>Título fixo + timeline</h2>
+        <p>Sticky de verdade e um fio que acende os nós numerados com a rolagem.</p>
+      </a>
+      <a class="item" href="effects/10-faq-acordeao/index.html">
+        <span class="item__n">10</span>
+        <span class="item__cat">Lista</span>
+        <h2>FAQ em acordeão</h2>
+        <p>Acessível, altura animada, uma aberta por vez, barra de luz.</p>
+      </a>
+      <a class="item" href="effects/11-carrossel-videos/index.html">
+        <span class="item__n">11</span>
+        <span class="item__cat">Carrossel</span>
+        <h2>Carrossel infinito de vídeos</h2>
+        <p>Laço sem emenda em CSS, YouTube leve carregado só no clique.</p>
+      </a>
+      <a class="item" href="effects/12-transicao-tela-no-meio/index.html">
+        <span class="item__n">12</span>
+        <span class="item__cat">Transição</span>
+        <h2>Transição: tela no meio</h2>
+        <p>A próxima seção abre como uma janela (clip-path) no meio da hero.</p>
+      </a>
+      <a class="item" href="effects/13-transicao-horizonte/index.html">
+        <span class="item__n">13</span>
+        <span class="item__cat">Transição</span>
+        <h2>Transição: horizonte do planeta</h2>
+        <p>Do claro para o escuro: o horizonte de um planeta sobe e cobre a tela.</p>
+      </a>
+      <a class="item" href="effects/14-showreel-vertical/index.html">
+        <span class="item__n">14</span>
+        <span class="item__cat">Scroll</span>
+        <h2>Showreel vertical com encaixe</h2>
+        <p>A imagem cresce do centro, o texto sobe, cada gesto vai ao próximo tópico.</p>
+      </a>
+      <a class="item" href="effects/15-loader-foguete/index.html">
+        <span class="item__n">15</span>
+        <span class="item__cat">Loader</span>
+        <h2>Loader: chama do foguete</h2>
+        <p>A chama do motor (SVG) é a máscara que revela a página.</p>
+      </a>
+      <a class="item" href="effects/16-fundo-espacial/index.html">
+        <span class="item__n">16</span>
+        <span class="item__cat">Fundo</span>
+        <h2>Fundo espacial</h2>
+        <p>Estrelas, grade, feixes de luz e o horizonte de um planeta que respira.</p>
+      </a>
+      <a class="item" href="effects/17-flutuar-e-foto/index.html">
+        <span class="item__n">17</span>
+        <span class="item__cat">Entrada</span>
+        <h2>Flutuar + foto revelada</h2>
+        <p>Objeto que entra girado e flutua; foto revelada por recorte com parallax.</p>
+      </a>
+    </div>
+    <p class="foot">Dica: abra cada demo e rode o código na ordem <code>shared/fx-core.js</code> → <code>effect.css</code> → <code>effect.js</code>. Veja o <a href="README.md">README</a>.</p>
+  </main>
+</body>
+</html>

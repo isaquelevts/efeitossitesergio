@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10 · FAQ em acordeão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap">
+  <link rel="stylesheet" href="../../shared/tokens.css">
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="effect.css">
+</head>
+<body>
+
+  <main>
+    <section class="faq"><div class="faq__inner container">
+      <header class="faq__head">
+        <h2 class="faq__title title" data-reveal="words">Perguntas <span class="grad">frequentes</span></h2>
+        <p class="faq__lede lede" data-reveal="block">Clique em uma pergunta.</p>
+      </header>
+      <div class="faq__list">
+        <div class="faq__item" data-faq>
+          <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a0" id="faq-q0"><span>Tem grupo de alunos?</span><span class="faq__plus" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="faq-a0" role="region" aria-labelledby="faq-q0"><p>Sim, no Discord — nossa comunidade está lá e você vai fazer parte dela.</p></div>
+        </div>
+        <div class="faq__item" data-faq>
+          <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span>Quantas horas-aula tem o curso?</span><span class="faq__plus" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>40 horas.</p></div>
+        </div>
+        <div class="faq__item" data-faq>
+          <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span>Eu sou leigo no assunto. Serve pra mim?</span><span class="faq__plus" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Claro! O curso foi feito justamente para os leigos e apressados.</p></div>
+        </div>
+        <div class="faq__item" data-faq>
+          <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span>Quando começam as aulas?</span><span class="faq__plus" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Imediatamente após a inscrição, você receberá os dados de acesso, e a cada semana entrará no ar um novo módulo.</p></div>
+        </div>
+        <div class="faq__item" data-faq>
+          <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span>Quanto tempo terei de acesso?</span><span class="faq__plus" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>1 ano de acesso a partir da compra — tempo mais do que suficiente para assistir ao curso.</p></div>
+        </div>
+      </div>
+    </div></section>
+  </main>
+
+  <div class="demo-tag"><a href="../../index.html">← todos os efeitos</a><span>10 · FAQ em acordeão</span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="../../shared/fx-core.js"></script>
+  <script src="effect.js"></script>
+</body>
+</html>

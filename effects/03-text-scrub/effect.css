@@ -1,0 +1,17 @@
+.head-sec { min-height: 70svh; }
+.scrub-list { margin: 0 auto; padding: 0 1.5rem; list-style: none; border-top: 1px solid var(--color-line-dark); }
+.scrub-item {
+  position: relative; display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 2rem; align-items: baseline;
+  padding: 3.4rem 0; border-bottom: 1px solid var(--color-line-dark);
+}
+.scrub-item::after {                       /* o fio de baixo ganha luz quando a frase chega */
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+  background: linear-gradient(90deg, var(--color-glow-sky), transparent 70%);
+  transform-origin: 0 50%; transform: scaleX(0); transition: transform 1.2s var(--ease-out);
+}
+.scrub-item.is-on::after { transform: scaleX(1); }
+.scrub-tag { display: flex; align-items: baseline; gap: 1rem; font-size: .8125rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(157,180,211,.55); transition: color .8s var(--ease-out); }
+.scrub-tag b { font-weight: 500; font-variant-numeric: tabular-nums; }
+.scrub-item.is-on .scrub-tag { color: var(--color-glow-sky); }
+.scrub-text { max-width: 42rem; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 1.5vw + .95rem, 2.375rem); line-height: 1.18; letter-spacing: -.028em; text-wrap: wrap; }
+@media (max-width: 899px) { .scrub-item { grid-template-columns: 1fr; gap: .9rem; padding: 2.2rem 0; } }

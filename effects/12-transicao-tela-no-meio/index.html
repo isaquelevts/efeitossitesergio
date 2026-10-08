@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12 · Transição: uma "tela" abre no meio da seção</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap">
+  <link rel="stylesheet" href="../../shared/tokens.css">
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="effect.css">
+</head>
+<body>
+
+  <main>
+    <div class="stack">
+      <header class="hero">
+        <div class="hero__media"></div>
+        <div class="container"><h1 class="title">Role para <span class="grad">abrir a tela</span></h1><p class="lede">A hero fica parada e a próxima seção abre como uma janela no meio dela.</p></div>
+      </header>
+      <section class="next">
+        <div class="next__intro container">
+          <h2 class="title" data-reveal="words">Astronomia é uma <span class="grad">ciência completa</span></h2>
+          <p class="lede" data-reveal="block">O texto só entra quando a janela já está com cerca de 45% aberta, centralizado.</p>
+        </div>
+        <div class="next__more container"><p class="lede">…e a seção segue normalmente depois que o pin solta.</p></div>
+      </section>
+    </div>
+    <section class="sec"><p class="lede">Próxima seção</p></section>
+  </main>
+
+  <div class="demo-tag"><a href="../../index.html">← todos os efeitos</a><span>12 · Transição: uma "tela" abre no meio da seção</span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="../../shared/fx-core.js"></script>
+  <script src="effect.js"></script>
+</body>
+</html>

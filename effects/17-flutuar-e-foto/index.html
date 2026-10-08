@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>17 · Objeto flutuando + foto revelada por recorte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap">
+  <link rel="stylesheet" href="../../shared/tokens.css">
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="effect.css">
+</head>
+<body>
+
+  <main>
+    <section class="sec"><div class="container born">
+      <figure class="born__figure"><div class="born__float"><img class="orb" src="../../assets/space-5.webp" alt="" width="500" height="500"></div></figure>
+      <div class="born__text">
+        <h2 class="title" data-reveal="words">Assim nasceu o <span class="grad">projeto…</span></h2>
+        <p class="lede" data-reveal="block">O objeto chega girado e desfocado, assenta e passa a flutuar: sobe e desce, balança e deriva de lado em ritmos diferentes.</p>
+      </div>
+    </div></section>
+    <section class="sec"><div class="container who">
+      <div class="who__text">
+        <h2 class="title" data-reveal="words">A foto é revelada <span class="grad">de baixo para cima</span></h2>
+        <p class="lede" data-reveal="block">Recorte com zoom de saída, um cartão que sobe depois e um parallax suave enquanto a seção passa.</p>
+      </div>
+      <figure class="who__figure" data-photo>
+        <div class="who__frame"><img src="../../assets/space-6.webp" alt="" width="1000" height="1000"></div>
+        <figcaption class="who__tag" data-tag><b>1986</b><span>passagem do cometa Halley</span></figcaption>
+      </figure>
+    </div></section>
+  </main>
+
+  <div class="demo-tag"><a href="../../index.html">← todos os efeitos</a><span>17 · Objeto flutuando + foto revelada por recorte</span><button id="replay" type="button">↻ repetir</button></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="../../shared/fx-core.js"></script>
+  <script src="effect.js"></script>
+</body>
+</html>

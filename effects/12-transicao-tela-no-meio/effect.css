@@ -1,0 +1,26 @@
+.hero { position: relative; min-height: 100svh; display: grid; align-items: center; }
+.hero__media { position: absolute; inset: 0; z-index: -1; background: url(../../assets/space-7.webp) center / cover; }
+.hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(2,11,20,.2), var(--color-night)); }
+.hero .container { display: grid; gap: 1rem; }
+
+/* a seção que abre: uma tela inteira com o texto no centro (é o que aparece dentro da "janela") */
+.next { position: relative; isolation: isolate; overflow: hidden; background: var(--color-night); padding-bottom: 8rem; }
+.next::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(54rem 26rem at 50% 100svh, rgba(24,86,255,.32), transparent 70%); }
+.next__intro { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1.4rem; max-width: 40rem; }
+.next__more { text-align: center; padding-top: 6rem; }
+
+/* ---------- STACK · transição "tela no meio" (ativada pelo JS no tablet/desktop) ---------- */
+.stack { position: relative; background: var(--color-night); }
+.stack.is-stacked .hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  height: 100svh;
+  z-index: 0;
+  transform-origin: 50% 50%;
+}
+.stack.is-stacked .hero { will-change: transform, opacity; }      /* camada própria: escala/fade na GPU */
+.stack.is-stacked .next { z-index: 1; }
+
